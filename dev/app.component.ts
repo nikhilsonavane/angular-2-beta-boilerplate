@@ -9,7 +9,7 @@ import {Component} from 'angular2/core';
         [class.clicked]=  "showDetail === true"
         >
         {{contact.firstname}}   {{contact.lastname}}<br>
-        
+        <input type="text" [(ngModel)]="contact.firstname" (click)="showLog()"   ><br>
         </h2>
         <div *ngIf = "showDetail === true" >
         Phone Number:{{contact.pnum}}<br/>
